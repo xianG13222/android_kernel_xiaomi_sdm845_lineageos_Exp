@@ -52,6 +52,7 @@ Module.symvers
 /vmlinuz
 /System.map
 /Module.markers
+out/
 
 #
 # Debian directory (make deb-pkg)
@@ -123,3 +124,7 @@ kernel/configs/android-*.cfg
 #Ignoring Android.bp link file
 #
 Android.bp
+
+# KernelSU
+drivers/kernelsu
+kernel_log-*.txt
