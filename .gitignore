@@ -128,3 +128,4 @@ Android.bp
 # KernelSU
 drivers/kernelsu
 kernel_log-*.txt
+Image.gz*
