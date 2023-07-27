@@ -19,7 +19,7 @@ fi
 
 start_time=$(date +%Y.%m.%d-%I:%M)
 
-make ARCH=arm64 O=out CC=clang ursa_lineageos_defconfig
+make ARCH=arm64 O=out CC=clang ursa_lineageos_ksu_defconfig
 # 定义编译线程数
 make ARCH=arm64 O=out CC=clang -j8 2>&1 | tee kernel_log-${start_time}.txt
 
