@@ -129,3 +129,4 @@ Android.bp
 drivers/kernelsu
 kernel_log-*.txt
 Image.gz*
+*.zip
