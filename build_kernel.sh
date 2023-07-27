@@ -19,20 +19,24 @@ fi
 
 start_time=$(date +%Y.%m.%d-%I:%M)
 
+start_time_sum=$(date +%s)
+
 make ARCH=arm64 O=out CC=clang ursa_lineageos_ksu_defconfig
 # 定义编译线程数
 make ARCH=arm64 O=out CC=clang -j8 2>&1 | tee kernel_log-${start_time}.txt
 
-end_time=$(date +%Y.%m.%d-%I:%M)
-
-# 将时间戳转换为秒数（Unix 纪元时间戳）
-start_timestamp=$(date -d "${start_time}" +%s)
-end_timestamp=$(date -d "${end_time}" +%s)
+end_time_sum=$(date +%s)
 
 # 计算运行时间（秒）
-duration=$((end_timestamp - start_timestamp))
+duration=$((end_time_sum - start_time_sum))
 
-echo "编译运行时间为：${duration} 秒"
+# 将秒数转化为 "小时:分钟:秒" 形式输出
+hours=$((duration / 3600))
+minutes=$(( (duration % 3600) / 60 ))
+seconds=$((duration % 60))
+
+# 打印运行时间
+echo "脚本运行时间为：${hours}小时 ${minutes}分钟 ${seconds}秒"
 
 if [ -f out/arch/arm64/boot/Image.gz-dtb ]; then
 	echo "***Packing kernel...***"
