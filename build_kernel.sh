@@ -25,7 +25,12 @@ make ARCH=arm64 O=out CC=clang -j8 2>&1 | tee kernel_log-${start_time}.txt
 
 end_time=$(date +%Y.%m.%d-%I:%M)
 
-duration=$((end_time - start_time))
+# 将时间戳转换为秒数（Unix 纪元时间戳）
+start_timestamp=$(date -d "${start_time}" +%s)
+end_timestamp=$(date -d "${end_time}" +%s)
+
+# 计算运行时间（秒）
+duration=$((end_timestamp - start_timestamp))
 
 echo "编译运行时间为：${duration} 秒"
 
