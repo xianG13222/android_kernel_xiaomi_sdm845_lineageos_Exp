@@ -27,6 +27,8 @@ make ARCH=arm64 O=out CC=clang -j8 2>&1 | tee kernel_log-${start_time}.txt
 
 end_time_sum=$(date +%s)
 
+end_time=$(date +%Y.%m.%d-%I:%M)
+
 # 计算运行时间（秒）
 duration=$((end_time_sum - start_time_sum))
 
