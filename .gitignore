@@ -130,3 +130,4 @@ drivers/kernelsu
 kernel_log-*.txt
 Image.gz*
 *.zip
+drivers/input/sensors/smi130/modules.order
