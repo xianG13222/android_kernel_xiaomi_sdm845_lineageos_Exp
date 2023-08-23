@@ -17,17 +17,17 @@ if [ ! -d "out" ]; then
 	mkdir out
 fi
 
-start_time=$(date +%Y.%m.%d-%I:%M)
+start_time=$(date +%Y.%m.%d-%I_%M)
 
 start_time_sum=$(date +%s)
 
 make ARCH=arm64 O=out CC=clang ursa_lineageos_ksu_defconfig
 # 定义编译线程数
-make ARCH=arm64 O=out CC=clang -j$(nproc) 2>&1 | tee kernel_log-${start_time}.txt
+make ARCH=arm64 O=out CC=clang -j12 2>&1 | tee kernel_log-${start_time}.txt
 
 end_time_sum=$(date +%s)
 
-end_time=$(date +%Y.%m.%d-%I:%M)
+end_time=$(date +%Y.%m.%d-%I_%M)
 
 # 计算运行时间（秒）
 duration=$((end_time_sum - start_time_sum))
