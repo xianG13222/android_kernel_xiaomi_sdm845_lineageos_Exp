@@ -63,6 +63,8 @@ jobs:
        bash sync_wireguard.sh
        bash syncanykernel3.sh
        bash synckernelsu_all.sh
+       cp -vf tools/AnyKernel3_sh/anykernel.sh tools/AnyKernel3/
+       cp -vf tools/AnyKernel3_sh/banner tools/AnyKernel3/
        bash build_kernel_github.sh
        rm -rf tools/AnyKernel3/.git
        rm -rf tools/AnyKernel3/.github
@@ -71,5 +73,5 @@ jobs:
     - name: Upload Mi8_ursa_LOS20_Kernel
       uses: actions/upload-artifact@v3
       with:
-        name: Mi8_ursa_LOS20_Kernel-${{ steps.get_time.outputs.TIME }}
+        name: Mi8_ursa_LOS21_Kernel-${{ steps.get_time.outputs.TIME }}
         path: "tools/AnyKernel3/*"
