@@ -1,4 +1,4 @@
-name: Build LineageOS Kernel For Xiaomi 8 EE & UD
+name: Build LineageOS Kernel For Xiaomi mix2s
 on:
   workflow_dispatch:
   schedule:
@@ -70,8 +70,8 @@ jobs:
        rm -rf tools/AnyKernel3/.github
 
 
-    - name: Upload Mi8_ursa_LOS20_Kernel
+    - name: Upload Mix2s_LOS21_Kernel
       uses: actions/upload-artifact@v3
       with:
-        name: Mi8_ursa_LOS21_Kernel-${{ steps.get_time.outputs.TIME }}
+        name: Mix2s_Polaris_LOS21_Kernel-${{ steps.get_time.outputs.TIME }}
         path: "tools/AnyKernel3/*"
