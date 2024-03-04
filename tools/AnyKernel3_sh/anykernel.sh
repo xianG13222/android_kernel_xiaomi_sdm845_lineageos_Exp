@@ -2,14 +2,14 @@
 ## osm0sis @ xda-developers
 
 properties() { '
-kernel.string=Xiaomi Mi 8 Explorer Edition Kernel Mod For LineageOS 20 Version -- Kernel MOD & Compile by Coconutat_Ian @ Github
+kernel.string=Xiaomi Mix2s Explorer Edition Kernel Mod For LineageOS 21 Version -- Kernel MOD & Compile by Coconutat_Ian @ Github
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=ursa
-device.name2=equuleus
+device.name2=polaris
 device.name3=dipper
 supported.versions=
 supported.patchlevels=
