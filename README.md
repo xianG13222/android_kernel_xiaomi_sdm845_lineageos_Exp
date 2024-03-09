@@ -1,6 +1,7 @@
 # Xiaomi 845 Kernel for LineageOS 21 with KernelSU
 ***
-![GitHub Downloads](https://img.shields.io/github/downloads/Coconutat/android_kernel_xiaomi_sdm845_lineageos_Exp/total?labelColor=%2300CED1&color=%23FF8C00)  
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Coconutat/android_kernel_xiaomi_sdm845_lineageos_Exp/total?style=for-the-badge&logo=Linux&logoColor=%2319dbb5&color=%2319dbb5)  
+**[下载分析](https://gra.caldis.me/?url=https://github.com/Coconutat/android_kernel_xiaomi_sdm845_lineageos_Exp)**    
 ***
 Kernel Version:4.9.337  
 Support OS:LineageOS 21  
